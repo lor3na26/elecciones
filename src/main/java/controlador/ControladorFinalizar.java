@@ -46,7 +46,7 @@ public class ControladorFinalizar implements Serializable{
     public void setCandidato(Candidato candidato) {
         this.candidato = candidato;
     }
-    
+    /*comparar cual candidato tiene mas votos*/
     public void candidatoGanador(){
         for(Candidato candidatoL : registro.getListaCandidatos()){
             if(this.candidato != null){

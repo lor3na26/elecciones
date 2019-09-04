@@ -23,6 +23,7 @@ import org.primefaces.model.chart.PieChartModel;
  */
 @ManagedBean
 @RequestScoped
+// controlador de votar/
 public class ControladorVotar implements Serializable {
 
     @ManagedProperty("#{controladorRegistro}")

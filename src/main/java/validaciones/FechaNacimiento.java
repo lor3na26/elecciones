@@ -27,6 +27,7 @@ public class FechaNacimiento implements Validator {
                     "Error", "Debe ingresar una fecha");
             throw new ValidatorException(msg);
         }
+        /*se guarda la fecha de nacimiento y se verifica que la fecha no sea futura*/
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         Date actual = new Date();
         Date dtNacimiento = (Date) value;
@@ -42,6 +43,7 @@ public class FechaNacimiento implements Validator {
                     "Error", "Debe una fecha en el pasado.");
             throw new ValidatorException(msg);
         }
+        /*se determina si es mayor de edad*/
         if (edad < 18) {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "Error", "Debe ser mayor a 18");

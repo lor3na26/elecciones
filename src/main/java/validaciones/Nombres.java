@@ -26,6 +26,7 @@ public class Nombres implements Validator {
                 "Error", "Debe ingresar un Nombre");
             throw new ValidatorException(msg);
         }
+        /*se crea la validacion para detectar si el nombre tiene caracteres o numeros*/
         for (int i = 0; i < texto.length(); i++)
 	{
             char caracter = texto.toUpperCase().charAt(i);

@@ -17,19 +17,22 @@ import javax.faces.validator.ValidatorException;
  * @author alejandra
  */
 @FacesValidator(value = "validacionDocumento")
+
 public class Documento implements Validator {
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String texto = String.valueOf(value);
+        /*se confirma que el campo no sea nulo*/
         if (value == null) {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "Error", "Debe ingresar un Documento");
             throw new ValidatorException(msg);
         }
+        /*validar que el documeto se encuentre en el rango*/
         Integer documento = Integer.parseInt(texto);
-        if (documento < 10000 || documento > 2147483647) {
+        if (documento < 10000 || documento > 2000000000) {
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
-                    "Error", "El documento debe estar entre el rango de 10.000 y 2.147.483.647");
+                    "Error", "El documento debe estar entre el rango de 10.000 y 2.000.000.000");
             throw new ValidatorException(msg);
         }
     }

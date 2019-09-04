@@ -1,7 +1,7 @@
 
 #top {
     position: relative;
-    background-color: #ab03ab;
+    background-color: #008000;
     color: white;
     padding: 5px;
     margin: 0px 0px 10px 0px;
@@ -16,7 +16,7 @@
 
 #left {
     float: left;
-    background-color: #ab03ab;
+    background-color: #008000;
     padding: 5px;
     width: 150px;
 }

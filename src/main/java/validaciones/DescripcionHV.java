@@ -28,6 +28,7 @@ public class DescripcionHV implements Validator {
         }
         for (int i = 0; i < texto.length(); i++)
 	{
+            /*se valida que la descripcion no tenga caracteres especiales*/
             char caracter = texto.charAt(i);
             int valorASCII = (int)caracter;
             if (valorASCII != 209 && valorASCII != 241  && (valorASCII < 65 || valorASCII > 90) && (valorASCII < 97 || valorASCII > 122) && (valorASCII < 48 || valorASCII > 57) && valorASCII != 32){

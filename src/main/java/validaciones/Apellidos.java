@@ -22,13 +22,14 @@ public class Apellidos implements Validator {
     /* se crea la validacion para apellidos*/
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String texto = String.valueOf(value);
+        /*el campo no puede ser nulo */
         if(texto.isEmpty()){
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
                 "Error", "Debe ingresar un Apellido");
             throw new ValidatorException(msg);
         }
         for (int i = 0; i < texto.length(); i++)
-	{
+	{/*se revisa que el apellido no tenga numeros o caractes*/
             char caracter = texto.toUpperCase().charAt(i);
             int valorASCII = (int)caracter;
             if (valorASCII != 165 && (valorASCII < 65 || valorASCII > 90)){
